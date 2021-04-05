@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "@architect/functions": "latest",
-    "@begin/data": "latest"
+    "@begin/data": "latest",
+    "node-fetch": "^2.6.1"
   }
 }
