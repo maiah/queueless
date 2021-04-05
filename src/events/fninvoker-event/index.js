@@ -1,15 +1,8 @@
 const arc = require("@architect/functions");
-const fetch = require("node-fetch");
+const axios = require("axios");
 
 exports.handler = arc.events.subscribe(async function fninvokerEvent(event) {
   console.log("invoking:", event);
-  const url = event.url;
-
-  await fetch(url, {
-    method: "POST",
-    body: JSON.stringify(event.payload),
-    headers: { "Content-Type": "application/json" },
-  });
-
+  await axios.post(event.url, event.payload);
   console.log("successfully invoked:", event.url);
 });
