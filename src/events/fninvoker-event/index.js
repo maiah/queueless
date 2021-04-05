@@ -3,8 +3,9 @@ const fetch = require("node-fetch");
 
 exports.handler = arc.events.subscribe(async function fninvokerEvent(event) {
   console.log("invoking:", event);
+  const url = event.url;
 
-  await fetch(event.url, {
+  await fetch(url, {
     method: "POST",
     body: JSON.stringify(event.payload),
     headers: { "Content-Type": "application/json" },
