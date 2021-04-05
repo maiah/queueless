@@ -4,6 +4,7 @@ node-events
 @http
 post /my-event
 post /publish
+post /worker
 
 @static
 
