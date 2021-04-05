@@ -1,6 +1,9 @@
 @app
 node-events
 
+@aws
+region ap-southeast-1
+
 @http
 post /my-event
 post /publish
