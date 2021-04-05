@@ -2,7 +2,7 @@ const arc = require("@architect/functions");
 const axios = require("axios");
 
 exports.handler = arc.events.subscribe(async function fninvokerEvent(event) {
-  console.log("invoking:", event);
+  console.log("invoking:", event.url);
   await axios.post(event.url, event.payload);
   console.log("successfully invoked:", event.url);
 });
